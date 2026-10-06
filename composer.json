@@ -1,0 +1,11 @@
+{
+    "name": "senai/laboratorio-da-agua",
+    "description": "Sistema Laboratorio da Agua - Testes de Qualidade e Biofiltro",
+    "type": "project",
+    "autoload": {
+        "files": ["funcoes.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    }
+}
