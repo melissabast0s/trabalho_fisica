@@ -1,6 +1,5 @@
 <?php
 
-// IDs 1, 2, 3, 4 - Classificação do pH (Faixa ideal: 6.0 a 9.5)
 function classificarPh(?float $ph): string {
     if ($ph === null) {
         return "Campo Vazio";
@@ -13,8 +12,6 @@ function classificarPh(?float $ph): string {
     }
     return "Fora do Padrão";
 }
-
-// IDs 5, 6, 7, 8 - Classificação da Turbidez em UNT (Limite máximo: 5.0 UNT)
 function classificarTurbidez(?float $turbidez): string {
     if ($turbidez === null) {
         return "Campo Vazio";
@@ -28,7 +25,6 @@ function classificarTurbidez(?float $turbidez): string {
     return "Fora do Padrão";
 }
 
-// IDs 9, 10, 11, 12 - Classificação do Cloro Residual (Faixa ideal: 0.2 a 5.0 mg/L)
 function classificarCloro(?float $cloro): string {
     if ($cloro === null) {
         return "Campo Vazio";
@@ -42,7 +38,6 @@ function classificarCloro(?float $cloro): string {
     return "Fora do Padrão";
 }
 
-// IDs 13, 14, 15, 16 - Classificação da Dureza (Limite máximo: 500.0 mg/L)
 function classificarDureza(?float $dureza): string {
     if ($dureza === null) {
         return "Campo Vazio";
@@ -56,10 +51,9 @@ function classificarDureza(?float $dureza): string {
     return "Fora do Padrão";
 }
 
-// Cálculo da Eficiência do Biofiltro com Tratamento de Divisão por Zero
 function calcularEficiencia(float $bruta, float $filtrada): float {
     if ($bruta <= 0.0) {
-        return 0.0; // Tratamento para evitar divisão por zero
+        return 0.0; 
     }
     if ($filtrada < 0.0) {
         return 0.0;
@@ -69,7 +63,6 @@ function calcularEficiencia(float $bruta, float $filtrada): float {
     return round($eficiencia, 1);
 }
 
-// Resultado final do parecer sobre a amostra de água
 function resultadoFinal(?float $ph, ?float $turbidez, ?float $cloro, ?float $dureza): string {
     if ($ph === null || $turbidez === null || $cloro === null || $dureza === null) {
         return "ERRO: CAMPO VAZIO";
@@ -91,7 +84,6 @@ function resultadoFinal(?float $ph, ?float $turbidez, ?float $cloro, ?float $dur
     return "NÃO POTÁVEL";
 }
 
-// Dataset com amostras de exemplo para carregar no sistema
 function obterAmostras(): array {
     return [
         "Amostra 01 - Rio (Água Bruta)" => [
