@@ -14,7 +14,6 @@ class LabAguaController
         }
 
 
-        // TURBIDEZ
         if ($turbidez <= 5) {
             $resultado["turbidez"] = "Dentro do padrão";
         } else {
@@ -22,7 +21,6 @@ class LabAguaController
         }
 
 
-        // CLORO
         if ($cloro >= 0.2 && $cloro <= 5) {
             $resultado["cloro"] = "Dentro do padrão";
         } else {
@@ -30,7 +28,6 @@ class LabAguaController
         }
 
 
-        // DUREZA
         if ($dureza <= 300) {
             $resultado["dureza"] = "Dentro do padrão";
         } else {
