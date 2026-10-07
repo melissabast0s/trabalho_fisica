@@ -1,5 +1,12 @@
 {
+    "name": "projeto/qualidade-agua",
+    "description": "Simulador Didático de Qualidade da Água e Biofiltro",
+    "autoload": {
+        "classmap": [
+            "Controller/"
+        ]
+    },
     "require-dev": {
-        "phpunit/phpunit": "^12.0"
+        "phpunit/phpunit": "^12"
     }
 }
